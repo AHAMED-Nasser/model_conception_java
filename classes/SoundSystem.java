@@ -1,12 +1,16 @@
-public class SoundSystem implements Observer{
+package classes;
+
+import interfaces.Observervateur;
+
+public class SoundSystem implements Observervateur {
     @Override
     public void update(String eventType, double value) {
         if (eventType.equals("HEALTH")) {
-            System.out.println("[SoundSystem] bruit de dégât de chute");
+            System.out.println("[classes.SoundSystem] bruit de dégât de chute");
         }
 
         if (eventType.equals("XP")) {
-            System.out.println("[SoundSystem] bruit de gain xp");
+            System.out.println("[classes.SoundSystem] bruit de gain xp");
         }
     }
 }
