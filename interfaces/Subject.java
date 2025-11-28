@@ -1,5 +1,7 @@
+package interfaces;
+
 public interface Subject {
-    void registerObserver(Observer o);
-    void removeObserver(Observer o);
+    void registerObserver(Observervateur o);
+    void removeObserver(Observervateur o);
     void notifyObservers(String eventType, double value);
 }
