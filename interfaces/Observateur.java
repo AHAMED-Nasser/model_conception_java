@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface Observervateur {
+public interface Observateur {
     void update(String eventType, double value);
 }
 

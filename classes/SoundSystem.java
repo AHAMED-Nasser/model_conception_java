@@ -1,8 +1,8 @@
 package classes;
 
-import interfaces.Observervateur;
+import interfaces.Observateur;
 
-public class SoundSystem implements Observervateur {
+public class SoundSystem implements Observateur {
     @Override
     public void update(String eventType, double value) {
         if (eventType.equals("HEALTH")) {

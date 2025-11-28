@@ -1,9 +1,9 @@
 package classes;
 
-import interfaces.Observervateur;
+import interfaces.Observateur;
 
 
-public class HUD implements Observervateur {
+public class HUD implements Observateur {
     @Override
     public void update(String eventType, double value) {
         if (eventType.equals("HEALTH")) {

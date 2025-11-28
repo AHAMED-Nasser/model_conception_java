@@ -1,6 +1,6 @@
 package classes;
 
-import interfaces.Observervateur;
+import interfaces.Observateur;
 import interfaces.Subject;
 
 import java.util.ArrayList;
@@ -8,22 +8,22 @@ import java.util.List;
 
 public class Player implements Subject {
 
-    private List<Observervateur> observers = new ArrayList<>();
+    private List<Observateur> observers = new ArrayList<>();
 
     private int health;
     private double xp;
 
-    public void registerObserver(Observervateur o) {
+    public void registerObserver(Observateur o) {
         observers.add(o);
     }
 
-    public void removeObserver(Observervateur o) {
+    public void removeObserver(Observateur o) {
         observers.remove(o);
     }
 
     @Override
     public void notifyObservers(String eventType, double value) {
-        for (Observervateur o : observers) {
+        for (Observateur o : observers) {
             o.update(eventType, value);
         }
     }
