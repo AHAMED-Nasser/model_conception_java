@@ -1,6 +1,7 @@
 .env/
 .git/
 .idea/
+out/
 
 # Compiled class file
 *.class
