@@ -36,7 +36,7 @@ public class Player implements Subject {
     }
 
     public void setXP(double xp) {
-        this.xp = xp;
+        this.xp += xp;
         notifyObservers("XP", xp);
     }
 }

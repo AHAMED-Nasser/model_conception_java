@@ -7,7 +7,7 @@ public class HUD implements Observateur {
     @Override
     public void update(String eventType, double value) {
         if (eventType.equals("HEALTH")) {
-            System.out.println("[classes.HUD] Point de vie mise à jour : " + value);
+            System.out.println("[classes.HUD] Point de vie mise à jour : +" + value);
         }
 
         if (eventType.equals("XP")) {
