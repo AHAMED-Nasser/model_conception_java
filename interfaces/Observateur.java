@@ -1,6 +1,8 @@
 package interfaces;
 
+import enums.EventType;
+
 public interface Observateur {
-    void update(String eventType, double value);
+    void update(EventType eventType, double value);
 }
 

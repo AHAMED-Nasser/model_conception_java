@@ -1,5 +1,6 @@
 package classes;
 
+import enums.EventType;
 import interfaces.Observateur;
 import interfaces.Subject;
 
@@ -22,7 +23,7 @@ public class Player implements Subject {
     }
 
     @Override
-    public void notifyObservers(String eventType, double value) {
+    public void notifyObservers(EventType eventType, double value) {
         for (Observateur o : observers) {
             o.update(eventType, value);
         }
@@ -32,11 +33,11 @@ public class Player implements Subject {
 
     public void setHealth(int health) {
         this.health = health;
-        notifyObservers("HEALTH", health);
+        notifyObservers(EventType.HEALTH, health);
     }
 
     public void setXP(double xp) {
         this.xp += xp;
-        notifyObservers("XP", xp);
+        notifyObservers(EventType.XP, xp);
     }
 }
